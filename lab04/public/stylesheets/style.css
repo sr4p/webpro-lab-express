@@ -1,0 +1,36 @@
+
+
+.bigBorder {
+  border-style: solid; 
+  border-color: limegreen;
+}
+.smallBorder {
+  background-color:lime; 
+  border-style: solid; 
+  border-color: limegreen; 
+  border-width: 2px;
+}
+.text{
+  text-decoration: underline;
+  color: slategrey;
+  margin-top: 8px;
+  float: right;
+}
+.texas{
+  float: right;
+  margin-top: 14px;
+}
+.input{
+  height: 20px;
+  
+}
+.button{
+  height: 30px; 
+  background-color: silver; 
+  border-color: slategray; 
+  padding-left: 40px; 
+  padding-right: 40px; 
+}
+.button2{
+  height: 30px; background-color: turquoise; color: white; padding-left: 60px; padding-right: 60px; 
+}

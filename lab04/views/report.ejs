@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <div style="margin-top: 30px; border-style: solid; border-color: limegreen; padding-bottom: 50px;">
+        <div style="margin: 5px;">
+            <div style="background-color:lime; border-style: solid; border-color: limegreen; border-width: 2px;">
+                <span style="font-size:large;"><b>รายงานข้อมูลผู้สมัคร ส.ส.เขต</b></span> 
+            </div>
+            <table>
+                <tr>
+                    <th style="width: 10%;"></th>
+                    <th style="width: 16%;"></th>
+                    <th style="width: 16%;"></th>
+                    <th style="width: 16%;"></th>
+                    <th style="width: 16%;"></th>
+                    <th style="width: 22%;"></th>
+                </tr>
+                <tr style="height: 50px;">
+                    <td style="text-align: center;">คำนำหน้าชื่อ: <%=type%></td>
+                    <td style="text-align: center;">ชื่อ: <%=first%></td>
+                    <td class="texas" >นามสกุล:</td>
+                    <td><%=last%></td>
+                    <td class="texas">หมายเลขบัตรประจำตัวประชาชน:</td>
+                    <td><%=id%></td>
+                </tr><br>
+                <tr style="height: 50px;">
+                    <td class="texas">ชื่อเล่น:</td>
+                    <td><%=nick%></td>
+                    <td class="texas">วัน/เดือน/ปี เกิด:</td>
+                    <td><%=date%></td>
+                    
+                </tr>
+                <tr style="height: 50px;">
+                    <td class="texas">จังหวัด:</td>
+                    <td><%=province%></td>
+                    <td class="texas">อำเภอ/เขต:</td>
+                    <td><%=district%></td>
+                    <td class="texas">ตำบล/แขวง:</td>
+                    <td><%=canton%></td>
+                </tr>
+                <tr style="height: 50px;">
+                    <td class="texas">บ้านเลขที่:</td>
+                    <td><%=number%></td>
+                    <td class="texas">ถนน:</td>
+                    <td><%=street%></td>
+                    <td class="texas">รหัสไปรษณีย์:</td>
+                    <td><%=zip%></td>
+                </tr>
+                <tr style="height: 50px;">
+                    <td class="texas">โทรศัพท์:</td>
+                    <td><%=tel%></td>
+                    <td class="texas">โทรสาร:</td>
+                    <td><%=tel2%></td>
+                    <td class="texas">โทรศัพท์มือถือ:</td>
+                    <td><%=phone%></td>
+                </tr>
+                
+            </table>
+            <span class="texas" style="float: none; margin-left: 90px;">อีเมล: <%=email%></span>
+        
+        </div>
+    </div>
+    <div style="margin-top: 5px; border-style: solid; border-color: limegreen; padding-bottom: 50px; padding: 10px; display: flex; justify-content : flex-end; margin-bottom: 10px;">
+        <button class="button2" style="margin-right: 5px;" >ปริ้น</button>
+        <button  class="button2" >ยกเลิก</button>
+    </div>
+</body>
+</html>

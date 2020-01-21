@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="javascripts/js.js"></script>
+</head>
+<body>
+    <div style="margin: 10px;">
+            <img src="images/Icon01.png" alt="Icon01" style="width: 100px; height: 100px; float: left;" ><br>
+            ในขั้นตอนที่ 1 ทำการลงทะเบียนก่อน เพื่อรับ <b>ขื่อผู้ใช้</b> และ <b>รหัสผ่าน</b><br><br>
+            ใช้ในการกรอกใบสมัครในขั้นตอนที่ 2 <br><br>
+            <div style="margin-top: 30px; border-style: solid; border-color: limegreen;">
+                <div style="margin-left: 5px; margin-right: 5px;">
+                    <div style="background-color:lime; border-style: solid; border-color: limegreen; border-width: 2px;">
+                        <span style="font-size:large;"><b> ข้อมูลทั่วไป [ภาษาไทย]</b></span> 
+                    </div>
+                    <form action='/report' method='POST'>
+                    <table style="margin-top: 5px; margin-bottom: 5px;"><br>
+                        <span class="text" style="float: none; margin-left: 40%;">หมายเลขบัตรประจำตัวประชาชน</span>
+                        <input class="input" type="number" name="id" id="id"  style="width:300px; margin-left: 5px;" required>
+                        <tr>
+                            <th style="width: 10%;"></th>
+                            <th style="width: 16%;"></th>
+                            <th style="width: 16%;"></th>
+                            <th style="width: 16%;"></th>
+                            <th style="width: 16%;"></th>
+                            <th style="width: 22%;"></th>
+                        </tr>
+                        <tr>
+                            <td class="text">คำนำหน้าชื่อ</td>
+                            <td><select  name="type" id="type" style="font-style: italic; height: 30px; width: 200px;" required>
+                                <option value="">เลือก..</option>
+                                <option value="นาย">นาย</option>
+                                <option value="นาย">นาง</option>
+                                <option value="นาย">นางสาว</option>
+                            </select></td>
+                            <td class="text">ชื่อ</td>
+                            <td><input class="input" type="text" name="first" id="first" style="width:200px" required></td>
+                            <td class="text">นามสกุล</td>
+                            <td><input class="input" type="text" name="last" id="last" style="width:200px" required></td>
+                        </tr>
+                        <tr>
+                            <td class="text">ชื่อเล่น</td>
+                            <td><input class="input" type="text" name="nick" id="nick" style="width:200px" required></td>
+                            <td class="text">วัน/เดือน/ปี เกิด</td>
+                            <td><input class="input" type="date" name="date" id="date" style="width:200px;" required></td>
+                            <td><img src="images/Icon02.png" alt="Icon02" style="width: 30px; height: 30px;"></td>
+                        </tr>
+                        <tr>
+                            <td class="text">จังหวัด</td>
+                            <td><select  name="province" id="province" style="font-style: italic; height: 30px; width: 200px;" required>
+                                <option value=""></option>
+                                <option value="กรุงเทพ">กรุงเทพ</option>
+                                <option value="ชลบุรี">ชลบุรี</option>
+                                <option value="สุรินทร์">สุรินทร์</option>
+                                <option value="เชียงใหม่">เชียงใหม่</option>
+                                <option value="กาญจนบุรี">กาญจนบุรี</option>
+                            </select></td>
+                            <td class="text">อำเภอ/เขต</td>
+                            <td><select  name="district" id="district" style="font-style: italic; height: 30px; width: 200px;" required>
+                                <option value=""></option>
+                                <option value="บางรัก">บางรัก</option>
+                                <option value="บางแสน">บางแสน</option>
+                                <option value="เมือง">เมือง</option>
+                                <option value="ศรีราชา">ศรีราชา</option>
+                                <option value="พระประแดง">พระประแดง</option>
+                            </select></td>
+                            <td class="text">ตำบล/แขวง</td>
+                            <td><select  name="canton" id="canton" style="font-style: italic; height: 30px; width: 200px;" required>
+                                <option value=""></option>
+                                <option value="แกใหญ่">แกใหญ่</option>
+                                <option value="แสนสุข">แสนสุข</option>
+                                <option value="บางแก้ว">บางแก้ว</option>
+                                <option value="มะตูม">มะตูม</option>
+                                <option value="เมือง">เมือง</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td class="text">บ้านเลขที่</td>
+                            <td><input class="input" type="text" name="number" id="number" style="width:200px" required></td>
+                            <td class="text">ถนน</td>
+                            <td><input class="input" type="text" name="street" id="street" style="width:200px" required></td>
+                            <td class="text">รหัสไปรษณีย์</td>
+                            <td><input class="input" type="number" name="zip" id="zip" style="width:200px" required></td>
+                        </tr>
+                        <tr>
+                            <td class="text">โทรศัพท์</td>
+                            <td><input class="input" type="number" name="tel" id="tel" style="width:200px" required></td>
+                            <td class="text">โทรสาร</td>
+                            <td><input class="input" type="number" name="tel2" id="tel2" style="width:200px" required></td>
+                            <td class="text">โทรศัพท์มือถือ</td>
+                            <td><input class="input" type="number" name="phone" id="phone" style="width:200px" required></td>
+                        </tr>
+                        
+                    </table>
+                    <span class="text" style="float: none; margin-left: 100px;">อีเมล</span>
+                    <input class="input" type="text" name="email" id="email" style="width:700px" required>
+                    <span style="color: red;">*ใช้ในการรับรหัสผ่าน กรณีลืมรหัสผ่าน</span>
+                    <div style="background-color:lime; border-style: solid; border-color: limegreen; border-width: 2px; margin-top: 10px;">
+                        <span style="font-size:large;"><b> ข้อมูลทั่วไป [ภาษาอังกฤษ]</b></span> 
+                    </div>
+                    <table style="margin-top: 5px; margin-bottom: 5px;">
+                        <tr>
+                            <th style="width: 10%;"></th>
+                            <th style="width: 16%;"></th>
+                            <th style="width: 16%;"></th>
+                            <th style="width: 16%;"></th>
+                            <th style="width: 16%;"></th>
+                            <th style="width: 22%;"></th>
+                        </tr>
+                        <tr>
+                            <td class="text">Prefix</td>
+                            <td><select  name="prefix" id="prefix" style="font-style: italic; height: 30px; width: 200px;" required>
+                                <option value="Mr.">Mr.</option>
+                                <option value="Mrs.">Mrs.</option>
+                                <option value="Miss">Miss</option>
+                            </select></td>
+                            <td class="text">First name</td>
+                            <td><input class="input" type="text" name="firstEng" id="firstEng" style="width:200px" required></td>
+                            <td class="text">Last name</td>
+                            <td><input class="input" type="text" name="lastEng" id="lastEng" style="width:200px" required></td>
+                        </tr>
+                    </table>
+                    <div style="background-color:lime; border-style: solid; border-color: limegreen; border-width: 2px; margin-top: 10px; padding: 10px; display: flex; justify-content : flex-end; margin-bottom: 10px;">
+                        <button type="submit" class="button" style="margin-right: 5px;">บันทึก</button>
+                        <button type="button" class="button" onclick="clearInput()">ยกเลิก</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+    </div>
+</body>
+</html>
